@@ -5,7 +5,7 @@ public class Data
     public static String[] names = new String[]
 
             {
-                "Monkey D. Luffy", "Roronoa Zoro", "Sanji", "usopp"
+                "Monkey D. Luffy", "Roronoa Zoro", "Vinsmoke Sanji", "God Usopp"
             };
 
     public static int[] images = new int[]
