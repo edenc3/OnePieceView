@@ -3,10 +3,13 @@ package com.example.onepieceview;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -46,19 +49,32 @@ public class CharactersInfo extends Fragment {
         return fragment;
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    //@Override
+    //public void onCreate(Bundle savedInstanceState) {
+    //super.onCreate(savedInstanceState);
+    //    if (getArguments() != null) {
+    //        mParam1 = getArguments().getString(ARG_PARAM1);
+    //        mParam2 = getArguments().getString(ARG_PARAM2);
+    //    }
+    //}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_characters_info, container, false);
+        View view = inflater.inflate(R.layout.fragment_characters_info, container, false);
+
+        ImageButton luf_button = view.findViewById(R.id.luffy_btn);
+
+        luf_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity mainActivity = (MainActivity) getActivity();
+                mainActivity.funcSecFrag();
+            }
+        });
+
+        return view;
     }
 }
+

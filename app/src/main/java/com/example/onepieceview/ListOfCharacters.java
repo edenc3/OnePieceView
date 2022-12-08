@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ListOfCharacters#newInstance} factory method to
+ * Use the  factory method to
  * create an instance of this fragment.
  */
 public class ListOfCharacters extends Fragment {
